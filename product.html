@@ -1,161 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-    <title>Google Mesh Wif System</title>
+    <title>Google Store</title>
     <style>
-      *{
-        font-family: 'Noto Sans JP', sans-serif;
+
+      .img-thumbnail:hover {
+        background-color: red;
+        opacity: 0.5;
       }
 
-      .related-products-interest{
-        float: left;
-      }
-      
-      
-      
-      .wrapper{
-       max-width:1000px;
-       margin-left: auto;
-       margin-right: auto;
-       padding: 25px;
-      
-     }
-     
-     .store-name{
-      text-align:center;
-     }
-
-     .store{
-
-       background-color: #ebf5ee;
-      }
-    
-      .product-description-float-right{
-        width: 50%;
-        float: right;
-      }
-
-      .code{
-        background-color: goldenrod;
-        border-style: solid;
-      }
-
-      .thing-you-might-like :hover{
-        color:green;
-        transform: scale(1.2);
-      }
-      
-      h2{
-        padding-left: 10px;
-      }
-      
       .rating-pic{
         width: 120px;
         padding-left: 10px;
       }
-
-      .product-picture-side-float-left{
-        float: left;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .my-list{
-        list-style-type: square;
-      }
-
-      .related-products-interest{
-       
-        width:100%;
-        text-align: left;
-      }
-      .related-pic{
-        width: 150px;
-        height:auto;
-      }
-
-      @media (min-width: 768px){
-       
-        .product-name{
-          float: right;
-          text-align: left;
-          width: 50%;
-        }
-
-        .my-list{
-          font-size: 1.8;
-        }
-
-        .product-description{
-          width: 49%;
-        }
-
-        .float-left{
-          float: left;
-        } 
-
-        .float-right{
-          float: right;
-        }
-      }
-
-      @media (min-width: 929px) {
-
-        .product-name{
-          float: right;
-          text-align: left;
-          width: 50%;
-        }
-
-        .my-list{
-          font-size: 1.8;
-        }
-
-        .product-description{
-          width: 49%;
-        }
-        
-        .float-left{
-          float: left;
-        } 
-
-        .float-right{
-          float: right;
-        }
-      }
-
     </style>
   </head>
   
-  
-  
   <body>
-    <div class = "store">
-      <h1 class = "store-name">The Google Store</h1>
-    </div>
-
-    <div class = "wrapper">
-      
-      <section class = "product">
-        <h2 id = product-name>Google Mesh Router (1 pack)</h2>
-        
-        <div class = "product-picture-side float-left">
-          <img src="https://www.netspotapp.com/images/upload/articles/wifi-mesh-sys/logoMeshGoogleWiFi@2x.png"  class ="product-pic"  />
-
-          <div class ="code">Use Promo code <strong><i>NOMORECRAPPYWIFI</i></strong> to get 20% off your order!</div>
+    <div class ="container-fluid">
+      <h1 class = "text-center">The Google Store</h1>
+      <div class ="row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+          <h4 id = product-name>Google Mesh Router (1 pack)</h4>
+          <img src="https://www.netspotapp.com/images/upload/articles/wifi-mesh-sys/logoMeshGoogleWiFi@2x.png" class="mx-auto d-block" alt="Responsive image">
+          <div class="p-3 mb-2 bg-warning text-dark">Use Promo code <strong><i>NOMORECRAPPYWIFI</i></strong> to get 20% off your order!</div>
         </div>
-      
-        
-        <div class = "product-description float-right">
-          <h2 id = product-name>Starting at $199</h2>
-          
-          <footer class = "rating"><img src="https://www.vippng.com/png/full/95-956766_4-stars-png-4-star-rating-png.png"  class ="rating-pic"  /> </footer>
+        <div class = "col-lg-4">
+          <h3>Starting at $199</h3>
+          <img src="https://www.vippng.com/png/full/95-956766_4-stars-png-4-star-rating-png.png" class="rating-pic" alt="...">
           <ul class = "my-list">
             <li>A new type of connected system for seamless WiFi coverage throughout your home, helping eliminate dead zones and buffering</li>
             <li>Network assist technology keeps your connection fast by always selecting the clearest channel and fastest band for your devices; WiFi throughput: 1200 MPBS.</li>
@@ -163,39 +43,34 @@
             <li>A single WiFi point covers up to 1,500 square feet, a set of three covers homes up to 4,500 square feet WiFi points work together so you can add more if you need additional coverage</li>
             <li>Connectivity technology: 2x2 802.11ac Wave 2 + BLE</li>
           </ul>
-        <div>
-        </section>
-      <br>
-      <br>
-      <br>
-      <br>
-    <aside class = "related-products-interest">
-      <h3>You may also like... </h3>
-         
-    
-      <div class = "thing-you-might-like">
-        <img src="https://i5.walmartimages.com/asr/66b917e6-d459-44f9-8c88-815863c0f3c7.3342e929be2c639d656e07a9676423da.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"  class ="related-pic"  />
-      <div class = "related-name"><p>Google Mesh Router (3 pack)</p></div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+      <div class ="row">
+        <h4>Other Products you may like</h4>
+        <br>
+        <br>
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-2">
+          <img src="https://i5.walmartimages.com/asr/66b917e6-d459-44f9-8c88-815863c0f3c7.3342e929be2c639d656e07a9676423da.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff" alt="..." class="img-thumbnail">
+          <p>Google Mesh Wifi Router (3 pack)</p>
+        </div>
+        <div class = "col-lg-2">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/7199N-Uz2AL._AC_SL1500_.jpg" alt="..." class="img-thumbnail">     
+          <p>Google Pixel 4a</p>
+        </div>
+        <div class = "col-lg-2">
+          <img src="https://static.bhphoto.com/images/images500x500/1571097351_1505873.jpg" alt="..." class="img-thumbnail">
+          <p>Google Nest Mini</p>
+        </div>
+        <div class = "col-lg-2">
+          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6288/6288362_sd.jpg" alt="..." class="img-thumbnail">
+          <p>Google ChromeCast</p>
+        </div>
+        <div class = "col-lg-2"></div>
       </div>
 
-  
-      <div class = "thing-you-might-like">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/7199N-Uz2AL._AC_SL1500_.jpg"  class ="related-pic"  />
-        <p>Google Pixel 4a</p>
-        </div>
-      
-  
-  
-      <div class = "thing-you-might-like">
-        <img src="https://static.bhphoto.com/images/images500x500/1571097351_1505873.jpg"  class ="related-pic"  />
-        <p>Google Nest Mini</p>
-      </div>
-    
-      <div class = "thing-you-might-like">
-        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6288/6288362_sd.jpg"  class ="related-pic"  />
-        <p>Google Chrome Cast</p>
-      </div>
-    </aside>
-  </div>
-  </body>
+    </div>
+
+</body>
 </html>
