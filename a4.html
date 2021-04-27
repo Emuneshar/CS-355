@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Objects</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-4">
+			<h1 class="col-12">Contacts</h1>
+			<h2 class="col-12 mt-4">New Contact</h2>
+			<div class="col-12 mt-4">
+				<form id="contact-form">
+					<div class="row">
+
+						<div class="col">
+							<label for="fname" class="sr-only">First Name:</label>
+							<input type="text" class="form-control" id="fname" placeholder="First Name">
+						</div> <!-- .col -->
+
+						<div class="col">
+							<label for="lname" class="sr-only">Last Name:</label>
+							<input type="text" class="form-control" id="lname" placeholder="Last Name">
+						</div> <!-- .col -->
+
+						<div class="col">
+							<label for="email" class="sr-only">Email:</label>
+							<input type="text" class="form-control" id="email" placeholder="Email">
+						</div> <!-- .col -->
+
+						<div class="col">
+							<button role="button" id = "Add" type="submit" class="btn btn-primary btn-lg">Add</button>
+						</div> <!-- .col -->
+
+					</div> <!-- .form-row -->
+				</form>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<h2 class="col-12 mt-4">List:</h2>
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col">
+				<button class="btn btn-primary btn-icon-split" id="show-three-btn" class="btn btn-outline-primary mb-3">Show First Three Contacts</button>
+				<button class="btn btn-primary btn-icon-split" id="show-all-btn" class="btn btn-outline-primary mb-3">Show All Contacts</button>
+				<button class="btn btn-danger btn-icon-split" id="delete-btn" class="btn btn-outline-danger mb-3">Delete All</button>
+			</div> <!-- .col -->
+		</div><!-- .row -->
+
+		<div class="row">
+			<div class="col">
+				<ul class="list-group" id="contact-list">
+					
+					<!-- Below is the template that all contacts should follow -->
+					<!-- <li class="list-group-item">Student, CUNY (cunystudent@cuny.edu)</li> -->
+				</ul>
+			</div> <!-- .col -->
+
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+		
+		// Use this array to keep track of contacts
+		let contacts = [];
+
+
+		// pushes a new contact onto the list
+		function contactPusher (event){
+			event.preventDefault();
+			let Fname = document.getElementById("fname").value;
+			let Lname = document.getElementById("lname").value;
+			let Email = document.getElementById("email").value;
+			if(Fname && Lname && Email){
+				contacts.push(new contactCreator(Fname, Lname, Email));
+				textClear();	
+			}
+		}
+
+		// contactCreator creates a new contact. Like a constructor in java.
+		function contactCreator(first, last, email){
+			this.firstName = first; 
+			this.lastName = last;
+			this.email = email;
+		}
+		
+		// Modifies HTML file so it displays contacts when function is summoned. takes in n so it could use only 1 print function
+		function outPut(n){
+			emptier();
+			for(let i = 0; i < n; i++){
+				while(typeof contacts[i] !== "undefined"){
+					document.getElementById("contact-list").innerHTML+=`<li class = "list-group-item">${contacts[i].firstName}, ${contacts[i].lastName}, ${contacts[i].email}</li>`;
+					break;
+				}	
+			}
+			
+		}
+
+		// clears out list in HTML when summoned. Essentially clears display
+		function emptier(){
+			document.getElementById("contact-list").innerHTML = "";
+		}
+
+		// clears out old text from text boxes on page so they can be reused
+		function textClear(){
+			document.getElementById("fname").value="";
+			document.getElementById("lname").value="";
+			document.getElementById("email").value="";
+		}
+
+		// event listener section 
+		document.getElementById("show-three-btn").addEventListener("click", ()=>{ outPut(3)});
+		document.getElementById("show-all-btn").addEventListener("click", ()=>  outPut(contacts.length));
+		document.getElementById("delete-btn").addEventListener("click", ()=> {contacts = []; emptier()});
+		document.getElementById("contact-form").addEventListener("submit", contactPusher);
+
+	</script>
+
+</body>
+</html>
